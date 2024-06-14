@@ -35,8 +35,7 @@ function draw() {
     fill(0);
     text("Score: " + score, width / 2, height / 2);
   }
-
-  document.getElementById('score').innerText = 'Score: ' + score;
+"Score: " + score;
 }
 
 function keyPressed() {
@@ -60,7 +59,7 @@ function keyPressed() {
         spawnBlock();
       } else {
         gameOver = true;
-        document.getElementById('gameOver').innerText = 'Game Over';
+        document.getElementById("gameOver").innerText = "Game Over";
       }
     }
   }
@@ -75,7 +74,7 @@ function resetGame() {
   let y = height - blockSize;
   stack.push(new Block(x, y, baseWidth));
   spawnBlock();
-  document.getElementById('gameOver').innerText = '';
+  document.getElementById("gameOver").innerText = '';
 }
 
 function spawnBlock() {
